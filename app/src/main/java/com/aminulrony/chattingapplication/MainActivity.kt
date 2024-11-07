@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.aminulrony.chattingapplication.Screens.LoginScreen
 import com.aminulrony.chattingapplication.ui.theme.ChattingApplicationTheme
 
 sealed class DestinationScreen(var route : String){
@@ -36,10 +37,14 @@ class MainActivity : ComponentActivity() {
             ChattingApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(modifier = Modifier.padding(innerPadding)) {
-                        Text(text="Welcome to my chatting application")
+                        ChatAppNavigation()
                     }
                 }
             }
         }
+    }
+    @Composable
+    fun ChatAppNavigation(){
+        LoginScreen()
     }
 }
