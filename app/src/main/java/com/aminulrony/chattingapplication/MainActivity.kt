@@ -50,7 +50,10 @@ class MainActivity : ComponentActivity() {
         val navController = rememberNavController()
         NavHost(navController = navController, startDestination = DestinationScreen.SignUp.route){
             composable(DestinationScreen.SignUp.route){
-                SignupScreen()
+                SignupScreen(navController)
+            }
+            composable(DestinationScreen.Login.route){
+                LoginScreen()
             }
         }
     }
