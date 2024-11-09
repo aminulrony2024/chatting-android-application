@@ -68,4 +68,6 @@ dependencies {
     // For local unit tests
     testImplementation("com.google.dagger:hilt-android-testing:2.52")
     kspTest("com.google.dagger:hilt-compiler:2.52")
+    val nav_version = "2.8.3"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
